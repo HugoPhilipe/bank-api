@@ -6,7 +6,7 @@ import com.eprogramar.bank.service.AccountService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-wdsad
+
 @RestController
 @RequestMapping("/accounts")
 class AccountController(private val service: AccountService) {
