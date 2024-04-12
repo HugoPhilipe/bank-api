@@ -90,7 +90,7 @@ class AccountControllerTests {
     fun `test delete account`(){
         val account = accountRepository
             .save(Account(name = "test", document = "36950513", phone = "987654321"))
-        val json = ObjectMapper().writeValueAsString(account)
+        ObjectMapper().writeValueAsString(account)
         mockMvc.perform(MockMvcRequestBuilders.delete("/accounts/${account.id}"))
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andDo(MockMvcResultHandlers.print())
